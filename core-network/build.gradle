@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlinx-serialization'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug{
+            buildConfigField "String", 'BASE_URL', "\"https://thesportsdb.com/api/v1/json/50130162/\""
+        }
+        release {
+            buildConfigField "String", 'BASE_URL', "\"https://thesportsdb.com/api/v1/json/50130162/\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation libs.kotlin.compiler
+    implementation libs.appcompat
+    implementation libs.google.material
+    implementation libs.kotlin.compiler
+    testImplementation libs.junit.compiler
+    androidTestImplementation libs.junit.ext
+    androidTestImplementation libs.expresso.compiler
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
+    implementation libs.kotlinx.serialization
+    implementation libs.retrofit.core
+    implementation libs.retrofit.kotlin.serialization
+    implementation libs.okhttp.logging
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+}

@@ -1,0 +1,106 @@
+[versions]
+# Kotlin
+kotlin = "1.8.0"
+
+# Appcompat
+appcompat = "1.4.2"
+
+# Kotlinx
+kotlinx-serialization = "1.3.2"
+
+# Lifecycle
+lifecycle = "2.3.1"
+
+# Hilt-Navigation
+hilt-navigation = "1.0.0"
+
+# Coil
+coil = "2.1.0"
+
+#Hilt
+hilt = "2.42"
+hiltExt = "1.0.0"
+
+#Retrofit
+retrofit = "2.9.0"
+retrofitKotlinxSerializationJson = "0.8.0"
+okhttp = "4.9.3"
+
+# Test
+junit = "4.13.2"
+junit-ext = "1.1.3"
+expresso-core = "3.4.0"
+
+# Compose
+compose-core = "1.3.0"
+compose-activity = "1.3.1"
+compose-ui = "1.2.1"
+
+# Room
+room-core = "2.3.0"
+
+# Google
+google-material = "1.6.1"
+google-accompanist = "0.10.0"
+
+[libraries]
+# Kotlin
+kotlin-compiler = { module = "androidx.core:core-ktx", version.ref = "kotlin" }
+
+# Appcompat
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+
+# Kotlinx
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+# Lifecycle
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+
+# Hilt navigation
+hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation" }
+
+#Retrofit
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitKotlinxSerializationJson" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+
+# Junit
+junit-compiler = { module = "junit:junit", version.ref = "junit" }
+junit-ext = { module = "androidx.test.ext:junit", version.ref = "junit-ext" }
+expresso-compiler = { module = "androidx.test.espresso:espresso-core", version.ref = "expresso-core" }
+compose-test = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose-ui" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
+
+# Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
+
+# compose-activity
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+
+
+# Coil
+coil-compiler = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+# Room
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-core" }
+
+# Compose
+compose-compiler = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "compose-ui" }
+compose-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-ui" }
+
+# Google
+google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
+google-accompanist-glide = { module = "com.google.accompanist:accompanist-glide", version.ref = "google-accompanist" }
+google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "google-accompanist" }
+google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "google-accompanist" }
+
+[bundles]
+accompanist = ["google-accompanist-glide", "google-accompanist-insets", "google-accompanist-systemuicontroller"]
