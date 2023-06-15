@@ -11,7 +11,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.bk.core.data.viewmodel.LeagueViewModel
 import com.bk.core.data.viewmodel.TeamsViewModel
 import com.net.core.network.model.LeagueData
-import com.net.parissportifdemo.ui.components.BlurryAutoCompleteSearchBar
+import com.net.parissportifdemo.ui.components.AutoCompleteSearchBar
 import com.net.parissportifdemo.ui.components.TeamImagesList
 import com.net.parissportifdemo.ui.theme.ParisSportifTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
         }
 
         Column {
-            BlurryAutoCompleteSearchBar(items, leagueName) { selectedItem ->
+            AutoCompleteSearchBar(items, leagueName) { selectedItem ->
                 println("User selected $selectedItem")
             }
             TeamImagesList(teamsUiState)

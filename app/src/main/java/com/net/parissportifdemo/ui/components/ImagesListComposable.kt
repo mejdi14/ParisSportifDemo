@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.bk.core.data.TeamsUiState
 
@@ -31,7 +32,7 @@ fun TeamImagesList(teamsUiState: TeamsUiState) {
                             .padding(4.dp)
                     ) {
                         Image(
-                            painter = rememberImagePainter(data = team.strTeamBadge),
+                            painter = rememberAsyncImagePainter(model = team.strTeamBadge),
                             contentDescription = "Image of ${team.strTeam}",
                             modifier = Modifier.aspectRatio(1f),
                             contentScale = ContentScale.Crop
